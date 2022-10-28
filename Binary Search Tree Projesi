@@ -1,0 +1,27 @@
+[7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
+
+Örnek: root x'dir. root'un sağından y bulunur. Solunda z bulunur vb.
+
+
+Binary Search Tree oluştururken verilen dizi içinden herhangi bir root seçilir. Bu kural gereğince root'dan daha büyük sayılar her zaman root'un sağına yazılırken 
+root'tan küçük sayılar solda yer alır. Ancak rootun sağındaki ve solundaki tüm elamanlarında konumlanması için özel bir kural vardır. Roottan sonraki elemanları 
+yerleştirirken her birine roota uygulanan kural uygulanır ve dizideki her elemanın sağında kendinden büyük solunda ise kendisinden küçük sayılar konumlanmış olur.
+ 
+ 
+ Bu dizideki root=7
+ 
+                           
+                               7
+                              /\
+                             5  8
+                            /\   \
+                           1  6   9 
+                          / \
+                         0   3
+                            / \
+                           2  4
+                           
+Örneğin eleman 3'ü yerleştirirken sorulacak sorular;
+*3 7'den küçük mü? Evet, sola kayıyoruz şimdi 5'teyiz
+*3 5'ten küçük mü? Evet, sola kayıyoruz şimdi 1'deyiz
+*3 1'den küçük mü? Hayır, sağa kayıyoruz --> ve artık 3'ü yerleştirebiliriz
